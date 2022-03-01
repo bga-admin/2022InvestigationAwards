@@ -1,0 +1,748 @@
+
+/* Loader */
+
+.loader {
+ border: 12px solid #f3f3f3;
+ border-radius: 50%;
+ border-top: 12px solid #3498db;
+ width: 60px;
+ height: 60px;
+ -webkit-animation: spin 2s linear infinite; /* Safari */
+ animation: spin 2s linear infinite;
+ margin: auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+ 0% { -webkit-transform: rotate(0deg); }
+ 100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+ 0% { transform: rotate(0deg); }
+ 100% { transform: rotate(360deg); }
+}
+
+    /*
+           *
+           * ==========================================
+           * CUSTOM UTIL CLASSES
+           * ==========================================
+           *
+           */
+
+
+    .navbar {
+      transition: all 0.4s;
+      background-color: #003a63!important;
+    }
+
+    .navbar .nav-link {
+      color: #fff;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar .navbar-brand {
+      color: #fff;
+    }
+
+
+    /* Change navbar styling on scroll */
+    .navbar.active {
+      /* background: #fff; */
+      box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.active .nav-link {
+      /* color: #555; */
+    }
+
+    .navbar.active .nav-link:hover,
+    .navbar.active .nav-link:focus {
+      /* color: #555; */
+      text-decoration: none;
+    }
+
+    .navbar.active .navbar-brand {
+      color: #555;
+    }
+
+    .employer {
+      margin-top: -15px;
+    }
+
+    /* Change navbar styling on small viewports */
+    @media (max-width: 991.98px) {
+      .navbar {
+        background: #003a63;
+      }
+
+      .navbar .navbar-brand,
+      .navbar .nav-link {
+        color: #555;
+      }
+    }
+
+    .myButtonBlack {
+      background-color: rgb(29,158,93);;
+      border: 2px solid #ffffff;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 4px;
+      font-size: 17px;
+      font-weight: bold;
+      padding: 11px 24px;
+      /* margin-left: 15px; */
+      text-decoration: none;
+    }
+
+    .myButtonBlack:hover {
+      background-color: rgb(29,158,93);
+      text-decoration: none;
+      color: white;
+      background-color: #3f3d3d;
+
+    }
+
+    .myButtonBlack:active {
+      position: relative;
+      top: 1px;
+
+    }
+
+    .myButtonWhite {
+      background-color: #ffffff;
+      border: 2px solid #000000;
+      display: inline-block;
+      cursor: pointer;
+      color: #000000;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 4px;
+      font-size: 17px;
+      font-weight: 900;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin-top: 35px;
+    }
+
+    .myButtonWhite:hover {
+      background-color: #000000;
+      text-decoration: none;
+      color: #ffffff;
+
+
+    }
+
+    .myButtonWhite:active {
+      position: relative;
+      top: 1px;
+    }
+
+    .myButtonRed {
+      background-color: #1D9E5D;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 4px;
+      font-size: 17px;
+      font-weight: bold;
+      padding: 16px 32px;
+      text-decoration: none;
+    }
+
+    .myButtonRed:hover {
+      background-color: #70a88c;
+      text-decoration: none;
+      color: #ffffff;
+
+
+    }
+
+    .myButtonRed:active {
+      position: relative;
+      top: 1px;
+    }
+
+    .myButtonRed1 {
+      background-color: #4B8BBf;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 4px;
+      font-size: 17px;
+      font-weight: bold;
+      padding: 16px 32px;
+      text-decoration: none;
+    }
+
+    .myButtonRed1:hover {
+      background-color: #92afc7;
+      text-decoration: none;
+      color: #ffffff;
+
+
+    }
+
+    .myButtonRed1:active {
+      position: relative;
+      top: 1px;
+    }
+
+    .contentHeader {
+      letter-spacing: 4px;
+      font-family: 'Heebo', sans-serif;
+
+
+      margin-bottom: 17px;
+
+
+    }
+
+    .contentHeader span {}
+
+    .aBorder {
+      border-bottom: solid white;
+      margin: 0px 4px;
+    }
+
+    .aBorder:hover {
+      border-bottom: solid rgb(90, 90, 90);
+      margin: 0px 4px;
+    }
+
+    .prize {
+      margin: 15px 0px;
+    }
+
+    p {
+      /* font-size: 125%; */
+      font-size: 1.2rem;
+      font-family: 'acumin-pro' !important;
+      font-weight: 400 !important;
+    }
+
+    .lineHeight {
+      line-height: 54px;
+    }
+
+    .sections {
+      display: block;
+      content: " ";
+      margin-top: -285px;
+      height: 285px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .bgapng {
+      width: 600px;
+      height: auto;
+      padding-bottom: 50px;
+    }
+
+    .hashtag {
+      position: relative;
+      top: 128px;
+      right: 6px;
+    }
+
+    .jumboText {
+
+      position: relative;
+      top: 128px;
+      left: 6px;
+
+    }
+
+    .aRemForWrong {
+      font-size: 5.2vw;
+      margin-bottom: 0rem;
+      margin-top: -20px;
+    }
+
+    .driehausAwards {
+      font-size: 2.3vw;
+      margin-bottom: 0rem;
+      color: #45494C;
+    }
+
+    .quote {
+      color: #000000;
+      font-style: italic;
+
+      font-size: 20px;
+      font-family: 'Proxima Nova', sans-serif;
+
+    }
+
+    .ida {
+      color: #000000;
+      font-family: 'Proxima Nova', sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+
+    }
+
+    .entireQuote {
+      margin-top: 44px;
+    }
+
+    .presentedBy {
+      margin-top: 45px;
+      font-size: 25px;
+    }
+
+    .presentedByDriehaus {
+      font-family: 'Proxima Nova', sans-serif;
+      font-weight: bold;
+      margin-left: -16px;
+      width: 285px;
+    }
+
+    .bgaLogo {
+      width: 17.625em;
+      margin-left: 2.5rem;
+    }
+
+    .donate p {
+      margin-top: 2rem;
+    }
+
+    .donate hr {
+      border-top: 1px solid rgba(0, 0, 0, 1.4);
+    }
+
+    .site-footer {
+      background-color: #003A63;
+      padding: 45px 0 20px;
+      font-size: 15px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+
+    .site-footer hr {
+      border-top-color: #bbb;
+      opacity: 0.5
+    }
+
+    .site-footer hr.small {
+      margin: 20px 0
+    }
+
+    .site-footer h6 {
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      letter-spacing: 2px
+    }
+
+    .site-footer a {
+      color: #ffffff;
+    }
+
+    .site-footer a:hover {
+      color: #3366cc;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      padding-left: 0;
+      list-style: none
+    }
+
+    .footer-links li {
+      display: block
+    }
+
+    .footer-links a {
+      color: #ffffff
+    }
+
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+      color: #3366cc;
+      text-decoration: none;
+    }
+
+    .footer-links.inline li {
+      display: inline-block
+    }
+
+    .site-footer .social-icons {
+      text-align: right
+    }
+
+    .site-footer .social-icons a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 6px;
+      margin-right: 0;
+      border-radius: 100%;
+      background-color: #33353d
+    }
+
+    .copyright-text {
+      margin: 0
+    }
+
+    @media (max-width:991px) {
+      .site-footer [class^=col-] {
+        margin-bottom: 30px
+      }
+    }
+
+    @media (max-width:767px) {
+      .site-footer {
+        padding-bottom: 0
+      }
+      .youtube{
+        width: 510px;
+        height: 287px;
+      }
+      .site-footer .copyright-text,
+      .site-footer .social-icons {
+        text-align: center
+      }
+    }
+
+    .social-icons {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-bottom: 4px
+    }
+
+    .social-icons li.title {
+      margin-right: 15px;
+      text-transform: uppercase;
+      color: #96a2b2;
+      font-weight: 700;
+      font-size: 13px
+    }
+
+    .social-icons a {
+      background-color: #eceeef;
+      color: #818a91;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 44px;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      margin-right: 8px;
+      border-radius: 100%;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear
+    }
+
+    .social-icons a:active,
+    .social-icons a:focus,
+    .social-icons a:hover {
+      color: #fff;
+      background-color: #29aafe
+    }
+
+    .social-icons.size-sm a {
+      line-height: 34px;
+      height: 34px;
+      width: 34px;
+      font-size: 14px
+    }
+
+    .social-icons a.facebook:hover {
+      background-color: #3b5998
+    }
+
+    .social-icons a.twitter:hover {
+      background-color: #00aced
+    }
+
+    .social-icons a.linkedin:hover {
+      background-color: #007bb6
+    }
+
+    .social-icons a.dribbble:hover {
+      background-color: #ea4c89
+    }
+
+    @media (max-width:767px) {
+      .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600
+      }
+    }
+
+
+    .graphicText {
+      text-align: left;
+      margin: 0 3rem;
+    }
+
+    h5 {
+      margin-top: 8px;
+    }
+
+
+
+    /*
+           *
+           * ==========================================
+           * FOR DEMO PURPOSES
+           * ==========================================
+           *
+           */
+    .text-small {
+      font-size: 0.9rem !important;
+    }
+
+
+    body {
+      min-height: 110vh;
+
+      background-color: #ffffff;
+      font-family: 'Proxima Nova Condensed', sans-serif;
+
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .view {
+      background-image: url('back12.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 916px;
+      background-position: center center;
+      position: relative;
+    }
+
+    .hash {
+      position: absolute;
+      bottom: 0px;
+      padding-left: 3.1875rem;
+      font-family: 'Proxima Nova', sans-serif;
+      font-weight: bold;
+      font-size: 1.5vw;
+      color: #003A63;
+    }
+
+    .hash2 {
+      font-family: 'Proxima Nova', sans-serif;
+      font-weight: bold;
+      color: #003A63;
+      font-size: small;
+      display: none;
+    }
+
+    .owl-item {
+
+      width: 250px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+
+    }
+
+
+
+
+    .view,
+    body,
+    html {
+      height: 100%
+    }
+
+    .navbar {
+
+    }
+
+    .page-footer,
+    .top-nav-collapse {
+      background-color: #ffffff
+    }
+
+    @media only screen and (max-width:414px) {
+      .navbar {
+        background-color: #ffffff
+      }
+
+      .bgaLogo {
+        width: 12.625em;
+        margin-left: 0.5rem;
+      }
+
+      .myButtonBlack {
+        display: none;
+      }
+
+      .view {
+        background-image: url('');
+        background-color: #FFC501;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 916px;
+        background-position: center center;
+        position: relative;
+      }
+
+      .graphicText {
+        text-align: center;
+        margin: 0 1rem;
+
+      }
+
+      .driehausAwards {
+        font-size: .88em;
+      }
+
+      .aRemForWrong {
+        font-size: 2.4em;
+        margin-bottom: 0rem;
+        margin-top: -3px;
+      }
+
+      .entireQuote {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .entireQuote p {
+        font-size: 80%;
+      }
+
+      .ida {
+        font-size: 19px;
+      }
+
+      .mobileImg {
+        background-image: url('news.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        background-position: center center;
+      }
+
+
+      .jumboText {
+        top: 105px !important;
+      }
+
+      .presentedByDriehaus {
+        width: 204px;
+      }
+
+      .hash {
+        /* position: absolute;
+   bottom: 0px;
+   font-family: 'Proxima Nova', sans-serif;
+   font-weight: bold;
+   color: #003A63;
+
+   background-color: rgba(0, 0, 0, 0);
+   padding-right: 0;
+   padding-left: 0;
+
+   font-size: 1.5vw; */
+        display: none;
+      }
+
+      .hash2 {
+        display: block;
+      }
+
+      .presentedBy {
+        margin-top: 45px;
+        font-size: 22px;
+      }
+
+      h2 {
+        margin-top: 26px !important;
+      }
+
+      .welcome_text {
+        text-align: center;
+      }
+
+
+
+    }
+
+    @media only screen and (max-width:768px) {
+      .navbar {
+        background-color: #ffffff
+      }
+
+      .bgaLogo {
+        background-image: url("") !important;
+      }
+
+      .myButtonBlack {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width:1440px) {
+      .jumboText {
+        top: 170px;
+      }
+    }
+
+    @media only screen and (min-width:2559px) {
+      .driehausAwards {
+        font-size: 2vw;
+      }
+
+      .aRemForWrong {
+        font-size: 4.2vw;
+      }
+
+      p {
+        font-size: 170%;
+      }
+
+      .bgaLogo {
+        width: 24.625em;
+      }
+
+      ul {
+        font-size: 1.5em;
+      }
+
+      .myButtonBlack {
+        font-size: 26px;
+      }
+    }
+
+    .judge {
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 354px;
+      background-position: center center;
+      position: relative;
+
+    }
+
+    .judgeTitle {
+      background-color: #003a63;
+      color: white;
+      width: 100%;
+
+    }

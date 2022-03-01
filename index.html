@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alice&family=Open+Sans&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f41333a293.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Playfair+Display+SC&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/jpg" href="bgafav.png" />
+    <link
+      rel="stylesheet"
+      href="https://preview.colorlib.com/theme/bootstrap/carousel-03/css/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/eok0mtb.css" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/juf0zjw.css" />
+    <script>
+      $(document).ready(function () {
+        // Optimalisation: Store the references outside the event handler:
+        var $window = $(window);
+        var $pane = $("#pane1");
+
+        function checkWidth() {
+          var windowsize = $window.width();
+          if (windowsize < 769) {
+            //if the window is greater than 440px wide then turn on jScrollPane..
+            document.getElementById("logo").src = "image2.png";
+          }
+        }
+        // Execute on load
+        checkWidth();
+        // Bind event listener
+        $(window).resize(checkWidth);
+
+        $(function () {
+          $(window).on("scroll", function () {
+            if ($(window).scrollTop() > 10) {
+              $(".navbar").addClass("active");
+              document.getElementById("logo").src = "image2.png";
+            } else {
+              $(".navbar").removeClass("active");
+              document.getElementById("logo").src = "logo-white.png";
+              checkWidth();
+            }
+          });
+        });
+      });
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: #f7f7f7 !important">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <!-- Navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <a
+          href="https://www.bettergov.org/"
+          class="navbar-brand text-uppercase font-weight-bold justify-content-start"
+          ><img id="" class="bgaLogo" src="bga.svg"
+        /></a>
+                <a href="http://www.driehausfoundation.org/" class="navbar-brand text-uppercase font-weight-bold justify-content-start"><img  style="width: 10.625em;
+                  margin-left: 1.5rem;
+              " src="driehaus.svg"></a>
+
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent1"
+        ></div>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto mr-3">
+            <li class="nav-item aBorder">
+              <a href="#about" class="nav-link text-uppercase font-weight-bold"
+                >About</a
+              >
+            </li>
+            <li class="nav-item active aBorder">
+              <a href="#prizes" class="nav-link text-uppercase font-weight-bold"
+                >Prizes</a
+              >
+            </li>
+            <li class="nav-item aBorder">
+              <a
+                href="#deadline"
+                class="nav-link text-uppercase font-weight-bold"
+                >Deadline</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- <a href="form.html" class="myButtonBlack">Submit Your Entry</a> -->
+        <!-- <button
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler navbar-toggler-right"
+        >
+          <i class="fa fa-bars"></i>
+        </button> -->
+        <a
+          href="form.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="myButtonBlack"
+          >Submit Your Entry</a
+        >
+        <button
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler navbar-toggler-right"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- <div class="view" >
+  <div class="graphicText  wow fadeIn jumboText" >
+    <p class="" style=" font-family: 'Proxima Nova', sans-serif; font-weight: bold;">The Richard H. Driehaus Foundation Awards for Investigative Reporting</p>
+    <p class="aRemForWrong" style="font-family: 'Proxima Nova', sans-serif; font-weight: bold;">
+      A Remedy For Wrong
+    </p>
+    <div class="entireQuote">
+    <div class="quote">
+      <p >"There must always be a remedy for<br>
+      wrong and injustice if we only know how <br>
+      to find it."</p>
+    </div>
+    <span class="ida"> -Ida B. Wells</span>
+  </div>
+  <div class="mobileImg"></div>
+  <div class="presentedBy">
+    <span>Presented By:</span><br>
+    <img class="presentedByDriehaus"   src="driehaus2.svg">
+    <div class="hash2">#BGAawards</div>
+  </div>
+  </div>
+
+
+  <div class="hash">#BGAawards</div>
+</div> -->
+    <div class="container py-5 " style="background-color: #ffffff"><br class="pt-5"/></div>
+    <div class="container pt-5" style="background-color: #ffffff">
+      <h1
+        class="display-4 pt-md-0 pt-5"
+        style="
+          color: #003a63;
+          text-align: center;
+          font-family: acumin-pro-condensed, sans-serif !important;
+          font-weight: 800 !important;
+        "
+      >
+        The Richard H. Driehaus Foundation Awards for Investigative Reporting
+      </h1>
+
+      <div class="container">
+        <hr />
+        <div class id="registration">
+          <div class="py-5  text-center" >
+
+            <a href="form.html" class="myButtonRed">Submit Your Entry</a>
+        </div>
+      </div>
+      <div id="about" style="height: 30px">
+        <span></span>
+      </div>
+      <div class="container mt-4">
+        <h2 class="contentHeader" style="font-weight: bold; text-align: center">
+          <span class="aboutHead">ABOUT THE AWARDS</span>
+        </h2>
+
+        <p class="">
+          The 2022 Richard H. Driehaus Foundation Awards for Investigative
+          Reporting, presented by the Better Government Association, will be in
+          May.
+        </p>
+        <p class="">
+          The BGA hosts the Richard H. Driehaus Foundation Awards for
+          Investigative Reporting with the generous support of the Richard H.
+          Driehaus Foundation. The foundation supports investigative reporting
+          that fosters greater transparency, accountability and effectiveness in
+          government institutions at the local level.
+        </p>
+      </div>
+      <div class="container" style="background-color: #ffffff">
+
+
+          <!-- <div class="py-5 mt-5 text-left" id="">
+          <div class="welcome_inner row">
+            <div class="col-lg-5">
+            <div class="welcome_img">
+            <img class="img-fluid mt-2" src="BGA.jpg" alt="">
+            </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+            <div class="welcome_text">
+              <h2 class="contentHeader " style="font-weight:bold"><span class="aboutHead">ABOUT THE  AWARDS</span></h2>
+              <p class="">
+                The 2022 Richard H. Driehaus Foundation Awards for Investigative Reporting, presented by the Better Government Association, will be in May.
+              </p>
+            <p class="">
+              The BGA hosts the Richard H. Driehaus Foundation Awards for Investigative Reporting with the generous support of the Richard H. Driehaus Foundation. The foundation supports investigative reporting that fosters greater transparency, accountability and effectiveness in government institutions at the local level.
+            </p>
+            </div>
+            </div>
+            </div>
+
+        </div> -->
+        <div id="prizes" style="height: 10px">
+          <span></span>
+        </div>
+
+        <div class="container-fluid py-5 mt-5 ">
+          <h2 class="contentHeader" style="font-weight: bold; text-align: center;">
+            <span>PRIZES</span>
+          </h2>
+          <div class="row" style="text-align: center;"> 
+            <div class="col-md-6" >
+              <h4  class="font-weight-bold">
+                Main Category
+              </h4>
+              <p style="font-size: 150%; ">
+                1st Place - $12,000
+              </p>
+              <p style="font-size: 150%;" >
+                Runner-up - $ 5,000
+              </p>
+              <p style="font-size: 150%; ">
+                Readers’ Choice - $1,000
+
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h4  class="font-weight-bold">
+                Smaller Newsrooms Category
+              </h4>
+              <p style="font-size: 150%; ">
+                1st Place - $ 7,000              
+              </p>
+              <p style="font-size: 150%; ">
+                Runner-up - $ 2,000
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+          <!-- <div class="py-5 mt-5 text-left">
+            <div class="welcome_inner row">
+              <div class="col-lg-5 offset-lg-1">
+                <div class="welcome_text">
+                  <h2 class="contentHeader" style="font-weight: bold">
+                    <span>PRIZES</span>
+                  </h2>
+                  <div
+                    class="prize"
+                    style="font-size: 150%; letter-spacing: 3px"
+                  >
+                    1st Place - $15,000
+                  </div>
+                  <div
+                    class="prize"
+                    style="font-size: 150%; letter-spacing: 3px"
+                  >
+                    2nd Place - $7,000
+                  </div>
+                  <div
+                    class="prize"
+                    style="font-size: 150%; letter-spacing: 3px"
+                  >
+                    3rd Place - $4,000
+                  </div>
+                  <div
+                    class="prize"
+                    style="font-size: 150%; letter-spacing: 3px"
+                  >
+                    Readers' Choice Prize - $1,000
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="welcome_img">
+                  <img class="img-fluid" src="places.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="container  mt-5" style="text-align: center;">
+            <h3 class="contentHeader" style="font-weight: bold">
+              <span>LAST YEAR'S WINNERS</span>
+            </h3>
+            <h4 class="mb-4">
+              In 2021, we honored three outstanding investigative stories and
+              the talented reporters who uncovered them:
+            </h4>
+            <div class="row">
+              <div class="col-lg-4 pb-5 pb-md-0">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <h4 class="mb-3" style="margin: auto; font-weight: 600;">                    1st Place:
+                    </h4>
+                  </div>
+    
+                  <div class="row">
+                    <div class="welcome_text">
+                      <a
+                        href="https://chicago.cbslocal.com/2020/12/17/you-have-the-wrong-place-body-camera-video-shows-moments-police-handcuff-innocent-naked-woman-during-wrong-raid/"><img
+                          class="img-fluid " src="4_AnjanetteYoung 1.png" alt=""></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="welcome_text text-center" style="width:100%">
+                      <h5><a
+                       href="https://chicago.cbslocal.com/2020/12/17/you-have-the-wrong-place-body-camera-video-shows-moments-police-handcuff-innocent-naked-woman-during-wrong-raid/"
+                       style="color:rgb(75,139,191);word-wrap:break-word;word-break:break-word" target="_blank"
+                       >
+                       
+    My Name is Anjanette Young</a></h5>
+                    </div>
+    
+                  </div>
+    
+    
+                  <div class="row">
+
+                    <div class="welcome_text" style="width:100%">
+                      <p style="clear:both;margin:0 0 12px 0;line-height:150%;text-align:center"> <span
+                          style="line-height:150%;">WBBM
+    Dave Savini, Samah Assad, Michele Youngerman, Mike
+    Klingele, DeAndra Taylor, Reed Nolan, Don Stanke, Alfredo
+    Roman, Chris McKnight, Dave Kenebrew, Tim Viste, Lana
+    Hinshaw-Klann, Tony Diasio</span> </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 pb-5 pb-md-0">
+                <div class="col-lg-12">
+     
+                  <div class="row">
+                    <h4 class="mb-3" style="margin: auto; font-weight: 600;">                    2nd Place:
+                    </h4>
+                  </div>
+     
+                  <div class="row">
+                    
+                    <div class="welcome_text">
+                      <a
+                        href="https://www.propublica.org/series/covid-19-inequities-in-chicago">
+                        <img class="img-fluid " src="2_covidineq 1.png" alt="">
+                      </a>
+     
+                    </div>
+                  </div>
+     
+                  <div class="row">
+                    <div class="welcome_text text-center" style="width:100%">
+                      <h5><a
+                       href="https://www.propublica.org/series/covid-19-inequities-in-chicago"
+                       style="color:rgb(75,139,191);word-wrap:break-word;word-break:break-word" target="_blank"
+                      >
+                      COVID-19 Inequities
+                       </a></h5>
+                    </div>
+                  </div>
+     
+                  <div class="row">
+                    <div class="welcome_text" style="width:100%">
+                      <p style="clear:both;margin:0 0 12px 0;line-height:150%;text-align:center"> <span
+                          style="line-height:150%;"> 	ProPublica Midwest
+                            Staff, ProPublica</span> </p>
+                    </div>
+                  </div>
+     
+     
+                </div>
+              </div>
+              <div class="col-lg-4 pb-5 pb-md-0">
+                <div class="col-lg-12">
+                    <div class="row">
+                      <h4 class="mb-3" style="margin: auto; font-weight: 600;">                    3rd Place:
+                      </h4>
+                    </div>
+                  <div class="row">
+                    <div class="welcome_text">
+                      <a href="https://interactive.wbez.org/2020/banking/disparity/"><img class="img-fluid "
+                          src="1_wherebanksdontlend 1.png" alt=""></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="welcome_text text-center" style="width:100%">
+                      <h5><a href="https://interactive.wbez.org/2020/banking/disparity/"
+                       style="color:rgb(75,139,191);word-wrap:break-word;word-break:break-word" target="_blank"
+                       >Where
+                       Banks Don't Lend</a></h5>
+                    </div>
+     
+                  </div>
+     
+     
+                  <div class="row">
+                    <div class="welcome_text">
+                      <p style="clear:both;margin:0 0 12px 0;line-height:150%;text-align:center"> <span
+                          style="line-height:150%;">
+                          City Bureau & WBEZ
+                          Andrew Fan (City Bureau); Linda Lutton, Alden Loury,
+                          Aaron Allen, Ashish Valentine (WBEZ)</span> </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+     
+              <!----->
+
+     
+     
+
+            </div>
+            </div>
+
+          </div>
+
+          <div class="mt-1 text-center">
+
+
+            <!-- <div class="welcome_inner row">
+              <div class="col-lg-4">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <div class="welcome_text">
+                      <a
+                        href="https://default.salsalabs.org/Tfccca74e-e51d-472c-b1f3-652036463227/926443e8-06ef-43d9-82be-a8acdbd183b4"
+                        ><img class="img-fluid" src="Quiet Rooms.png" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="welcome_text text-center" style="width: 100%">
+                      <h4>
+                        1st Place $15,000 & <br />
+                        Readers' Choice $1,000
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="welcome_text">
+                      <p
+                        style="
+                          clear: both;
+                          margin: 0 0 12px 0;
+                          line-height: 150%;
+                          text-align: center;
+                        "
+                      >
+                        <span style="line-height: 150%"
+                          ><a
+                            href="https://default.salsalabs.org/Tfccca74e-e51d-472c-b1f3-652036463227/926443e8-06ef-43d9-82be-a8acdbd183b4"
+                            style="
+                              color: rgb(75, 139, 191);
+                              word-wrap: break-word;
+                              word-break: break-word;
+                            "
+                            target="_blank"
+                            data-saferedirecturl="https://www.google.com/url?q=https://default.salsalabs.org/Tfccca74e-e51d-472c-b1f3-652036463227/926443e8-06ef-43d9-82be-a8acdbd183b4&amp;source=gmail&amp;ust=1614870097149000&amp;usg=AFQjCNEFG1rBZzcftimgwMHN_z2J4Yq9eQ"
+                            >"The Quiet Rooms"</a
+                          >&nbsp;by&nbsp;Jennifer Smith Richards, Chicago
+                          Tribune; Jodi S. Cohen and Lakeidra Chavis, ProPublica
+                          Illinois</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <div class="welcome_text">
+                      <a
+                        href="https://default.salsalabs.org/Tec374ea0-1a61-46b2-8c12-c109418202d7/926443e8-06ef-43d9-82be-a8acdbd183b4"
+                      >
+                        <img class="img-fluid" src="Unwarranted 2.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="welcome_text text-center" style="width: 100%">
+                      <h4>2nd Place<br />$7,000</h4>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="welcome_text">
+                      <p
+                        style="
+                          clear: both;
+                          margin: 0 0 12px 0;
+                          line-height: 150%;
+                          text-align: center;
+                        "
+                      >
+                        <span style="line-height: 150%"
+                          ><a
+                            href="https://default.salsalabs.org/Tec374ea0-1a61-46b2-8c12-c109418202d7/926443e8-06ef-43d9-82be-a8acdbd183b4"
+                            style="
+                              color: rgb(75, 139, 191);
+                              word-wrap: break-word;
+                              word-break: break-word;
+                            "
+                            target="_blank"
+                            data-saferedirecturl="https://www.google.com/url?q=https://default.salsalabs.org/Tec374ea0-1a61-46b2-8c12-c109418202d7/926443e8-06ef-43d9-82be-a8acdbd183b4&amp;source=gmail&amp;ust=1614870097149000&amp;usg=AFQjCNFJz9jrfV7cORPDNqNu81c_b0tA_w"
+                            >"Unwarranted: Wrong&nbsp;Raids"</a
+                          >
+                          by&nbsp;Dave Savini, Michele Youngerman, Samah Assad,
+                          Rebecca McCann, Deandre Taylor&nbsp;and Mike Klingele,
+                          WBBM-TV</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <div class="welcome_text">
+                      <a
+                        href="https://default.salsalabs.org/T93262270-13f1-451d-bd92-3a0c7063cfb4/926443e8-06ef-43d9-82be-a8acdbd183b4"
+                      >
+                        <img class="img-fluid" src="Bad Bet.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="welcome_text text-center" style="width: 100%">
+                      <h4>3rd Place<br />$4,000</h4>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="welcome_text">
+                      <p
+                        style="
+                          clear: both;
+                          margin: 0 0 12px 0;
+                          line-height: 150%;
+                          text-align: center;
+                        "
+                      >
+                        <span style="line-height: 150%"
+                          ><a
+                            href="https://default.salsalabs.org/T93262270-13f1-451d-bd92-3a0c7063cfb4/926443e8-06ef-43d9-82be-a8acdbd183b4"
+                            style="
+                              color: rgb(75, 139, 191);
+                              word-wrap: break-word;
+                              word-break: break-word;
+                            "
+                            target="_blank"
+                            data-saferedirecturl="https://www.google.com/url?q=https://default.salsalabs.org/T93262270-13f1-451d-bd92-3a0c7063cfb4/926443e8-06ef-43d9-82be-a8acdbd183b4&amp;source=gmail&amp;ust=1614870097149000&amp;usg=AFQjCNFM4yKOpGDXSjYnrqlpyLdAcFR3XA"
+                            >"The Bad Bet"</a
+                          >
+                          by&nbsp;Jason Grotto and Sandhya Kambhampati,
+                          ProPublica Illinois; Dan Mihalopoulos, WBEZ Public
+                          Radio</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div id="deadline" style="height: 10px">
+              <span></span>
+            </div>
+            <div class="py-5 mt-3 text-center" id="deadline">
+              <h1 class="contentHeader" style="font-weight: bold">
+                <span>DEADLINE & RULES</span>
+              </h1>
+              <!-- <p class="lineHeight h4">
+                Submission must be recieved by
+                <strong class="text-danger"
+                  >Friday, April 2, 2021 at 11:59pm</strong>.
+              </p> -->
+              <div
+                class="text-left"
+                style="font-family: 'Proxima Nova Condensed', sans-serif"
+              >
+                <p>
+                  Judged by a rotating panel of journalists and media educators, the awards highlight the impact of Illinois investigative reporting as a reform tool within the context of state and local government waste, fraud and corruption. In addition to using credible and impressive investigative techniques, the winning entries will have made significant contributions to inform the public on issues of government failings and corruption and will have prompted reforms.
+
+                </p>
+
+                <p>
+                  This year, we’re excited to introduce a new category to the competition:
+
+                </p>
+
+                <h4 class="pt-3" style=" font-weight: 600;">
+                  Smaller Newsroom Category
+                </h4>
+                <p>This category is for news organizations with head offices in Illinois with an editorial staff of 20 or fewer people.
+                </p>
+                <p>
+                  Submissions should be limited to five stories, and newsrooms may submit multiple entries from multiple reporters. While individuals or news organizations may submit multiple entries, each entry should be submitted separately. Supporting material will be accepted but is not necessary. Submissions must be received by April 3 at 11:59 p.m. CST. All applications must meet standards set forth in the Society of Professional Journalists’ Code of Ethics. Entities that are principally advocacy organizations are not eligible. Entries should include all related corrections, clarifications or retractions.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="donate">
+          <hr />
+          <p class="text-center">
+            Not making a submission this year, but still want to support BGA?
+          </p>
+          <div class="container">
+            <a
+              href="https://default.salsalabs.org/Td4ccb64c-8ae0-40d8-9c3c-dba38de069e7/926443e8-06ef-43d9-82be-a8acdbd183b4"
+              style="
+                color: rgb(0, 58, 99);
+                background: rgb(255, 242, 0);
+                border-color: rgb(29, 158, 93);
+                border-radius: 8px;
+                border-width: 1px;
+                border-style: solid;
+                font-family: inherit;
+                font-weight: 400;
+                line-height: 1;
+                text-decoration: none;
+                text-align: center;
+                display: block;
+                padding-top: 0.75em;
+                padding-right: 1.5em;
+                padding-bottom: 0.83333em;
+                padding-left: 1.5em;
+                clear: both;
+                font-size: 1.08333em;
+                word-wrap: break-word;
+                word-break: break-word;
+                background-color: rgb(29, 158, 93);
+              "
+              target="_blank"
+              data-saferedirecturl="https://www.google.com/url?q=https://default.salsalabs.org/Td4ccb64c-8ae0-40d8-9c3c-dba38de069e7/926443e8-06ef-43d9-82be-a8acdbd183b4&amp;source=gmail&amp;ust=1614803319781000&amp;usg=AFQjCNGjZWXqCH8PNlwZE_52mTBgpxadeA"
+              ><span style="font-size: 17.33328px; color: rgb(255, 255, 255)"
+                >MAKE A GIFT TODAY</span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Site footer -->
+    <footer class="site-footer mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6></h6>
+            <p class="text-justify">
+              <a
+                href="https://www.bettergov.org/"
+                class="navbar-brand text-uppercase font-weight-bold justify-content-start"
+                ><img id="" style="width: 90px" src="logo-white.png"
+              /></a>
+            </p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="https://www.bettergov.org/about-us/">About Us</a>
+              </li>
+              <li>
+                <a href="https://www.bettergov.org/contact/">Contact Us</a>
+              </li>
+              <li><a href="https://donate.bettergov.org/">Contribute</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2021 All Rights Reserved by
+              <a href="www.bettergov.org">Better Government Association </a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="https://www.facebook.com/bettergov/"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="twitter"
+                  href="https://twitter.com/BetterGov?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="linkedin"
+                  href="https://www.linkedin.com/company/better-government-association"
+                  ><i class="fa fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-18960172-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-18960172-1");
+  </script>
+</html>
