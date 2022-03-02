@@ -224,7 +224,7 @@
       <div id="about" style="height: 30px">
         <span></span>
       </div>
-      <div class="container mt-4">
+      <div class="container pt-5">
         <h2 class="contentHeader" style="font-weight: bold; text-align: center">
           <span class="aboutHead">ABOUT THE AWARDS</span>
         </h2>
@@ -639,7 +639,7 @@
                 </div>
               </div>
             </div> -->
-            <div id="deadline" style="height: 10px">
+            <div id="deadline" style="height: 20px">
               <span></span>
             </div>
             <div class="py-5 mt-3 text-center" id="deadline">
@@ -754,7 +754,7 @@
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
             <p class="copyright-text">
-              Copyright &copy; 2021 All Rights Reserved by
+              Copyright &copy; <span id="date"></span> All Rights Reserved by
               <a href="www.bettergov.org">Better Government Association </a>.
             </p>
           </div>
@@ -800,4 +800,9 @@
 
     gtag("config", "UA-18960172-1");
   </script>
+  <script>
+    const d = new Date();
+    let year = d.getFullYear();
+    document.getElementById("date").innerHTML = year;
+    </script>
 </html>
