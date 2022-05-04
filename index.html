@@ -153,13 +153,20 @@
         >
           <i class="fa fa-bars"></i>
         </button> -->
-        <a
+        <!-- <a
           href="form.html"
           target="_blank"
           rel="noopener noreferrer"
           class="myButtonBlack"
           >Submit Your Entry</a
-        >
+        > -->
+        <a
+        href="https://www.eventbrite.com/e/the-richard-h-driehaus-foundation-awards-for-investigative-reporting-tickets-322672160117"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="myButtonBlack"
+        >Register Here</a
+      >
         <button
           type="button"
           data-toggle="collapse"
@@ -218,9 +225,16 @@
 
         <div class id="registration">
           <div class="py-5  text-center" >
-            <h2 class="pb-3"><strong>Submit Your Entry Here:</strong></h2>
+            <h2 class="pb-3"><strong>Join us Tuesday, June 21, 2022, to celebrate this year's winners of the Richard H. Driehaus Foundation Awards for Investigative Reporting.
+            </strong></h2>
 
-            <a href="form.html" class="myButtonRed">Submit Your Entry</a>
+            <a
+            href="https://www.eventbrite.com/e/the-richard-h-driehaus-foundation-awards-for-investigative-reporting-tickets-322672160117"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="myButtonBlack"
+            >Register Here</a
+          >
         </div>
       </div>
       <hr>
@@ -804,3 +818,40 @@
     document.getElementById("date").innerHTML = year;
     </script>
 </html>
+
+
+<script>
+
+
+React.useEffect(
+        
+        function(){
+        
+        fetch("https://opentdb.com/api.php?amount=5&category=17&difficulty=medium&type=multiple")
+        .then(res => res.json())
+        .then(data => 
+        
+        setQuestions(function(){
+            //why cant I set multichoice?? 
+        setMultichoice([data])
+        console.log(data)            
+            return data.results.map( (results) => {
+            const answers = [...results.incorrect_answers]
+            answers.push(results.correct_answer)
+            return shuffle(answers)
+         }
+        
+        )
+        console.log(data +"fuuuuuuck")
+                console.log("fuuuuuuck")
+
+
+
+
+        
+            
+            }))
+        
+    }, [0]) 
+
+</script>
